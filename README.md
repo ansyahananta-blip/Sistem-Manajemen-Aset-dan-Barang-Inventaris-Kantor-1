@@ -132,9 +132,48 @@ Sistem Manajemen Aset dan Barang Inventaris Kantor adalah aplikasi berbasis web 
 
 ## 6. Diagram Proses (Use Case & Flowchart)
 
-Lihat file terpisah:
-- `docs/use-case-diagram.md` - Diagram Use Case
-- `docs/flowchart.md` - Flowchart proses
+Aktor: Admin, Manajer Aset, Staff Inventaris, Kepala Departemen, Kepala Kantor
+
+Use Case:
+UC-001: Login/Logout
+  - Aktor: Semua
+  - Proses: User login/logout dari sistem
+
+UC-002: Manajemen User
+  - Aktor: Admin
+  - Proses: Tambah, edit, hapus user
+
+UC-003: CRUD Kategori
+  - Aktor: Manajer Aset
+  - Proses: Kelola kategori aset
+
+UC-004: CRUD Lokasi
+  - Aktor: Manajer Aset
+  - Proses: Kelola lokasi/departemen
+
+UC-005: CRUD Aset
+  - Aktor: Manajer Aset, Staff Inventaris
+  - Proses: Tambah, edit, hapus, lihat aset
+
+UC-006: Update Status Aset
+  - Aktor: Staff Inventaris, Manajer Aset
+  - Proses: Ubah status aset
+
+UC-007: Pemeriksaan Fisik
+  - Aktor: Staff Inventaris
+  - Proses: Lakukan physical check aset
+
+UC-008: Generate Laporan
+  - Aktor: Manajer Aset, Kepala Kantor
+  - Proses: Buat laporan aset
+
+UC-009: View Dashboard
+  - Aktor: Admin, Manajer Aset, Kepala Kantor
+  - Proses: Lihat statistik aset
+
+UC-010: Export Data
+  - Aktor: Manajer Aset, Kepala Kantor
+  - Proses: Download laporan ke Excel/PDF
 
 ---
 
@@ -147,16 +186,3 @@ Silakan lihat file `TEAM_ASSIGNMENT.md`
 ## 8. Link Repository GitHub
 
 **Repository:** https://github.com/dwui-rgb/Asset-Inventory-Management
-
----
-
-## Tech Stack
-
-- **Frontend:** HTML, CSS, JavaScript / React
-- **Backend:** PHP / Node.js / Python
-- **Database:** MySQL / PostgreSQL
-- **Version Control:** Git & GitHub
-
----
-
-## Struktur Folder
