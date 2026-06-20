@@ -18,7 +18,7 @@ TABEL: INVENTARIS_RAW (Data belum dinormalisasi)
 │ A002    │ Kursi Kantor │ Furniture        │ Lantai 2, R202 │ Citra      │ Baik, 20-Jan    │
 │         │              │                  │                │ Dino       │ Baik, 05-Feb    │
 ├─────────┼──────────────┼──────────────────┼────────────────┼────────────┼─────────────────┤
-│ A003    │ Printer HP   │ Elektronik       │ Lantai 1, Gudang│ Eka      │ Baik, 01-Jan    │
+│ A003    │ Printer HP   │ Elektronik       │Lantai 1, Gudang│ Eka        │ Baik, 01-Jan    │
 │         │              │                  │                │            │ Baik Dirawat,   │
 │         │              │                  │                │            │ 25-Feb          │
 └─────────┴──────────────┴──────────────────┴────────────────┴────────────┴─────────────────┘
@@ -130,7 +130,7 @@ TABEL 3: LOKASI_2NF (Pisahkan atribut lokasi)
 
 TABEL 4: PEMINJAMAN_2NF
 ┌──────────┬──────────┬────────────┬──────────────┬──────────────────┐
-│ ID_Pinjam│ ID_Aset  │ ID_Pegawai │ Tgl_Pinjam   │ Tgl_Pengembalian  │
+│ ID_Pinjam│ ID_Aset  │ ID_Pegawai │ Tgl_Pinjam   │ Tgl_Pengembalian │
 ├──────────┼──────────┼────────────┼──────────────┼──────────────────┤
 │ P001     │ A001     │ PG001      │ 15-Jan-2024  │ 20-Jan-2024      │
 │ P002     │ A001     │ PG002      │ 01-Feb-2024  │ 05-Feb-2024      │
@@ -200,7 +200,7 @@ TABEL 1: ASET_3NF (Final)
 TABEL 2: KATEGORI_3NF
 ┌──────────────┬──────────────────┬──────────────────┐
 │ ID_Kategori  │ Nama_Kategori    │ Deskripsi        │
-├───��──────────┼──────────────────┼──────────────────┤
+├──────────────┼──────────────────┼──────────────────┤
 │ K001         │ Furniture        │ Perabotan Kantor │
 │ K002         │ Elektronik       │ Peralatan Elektr │
 └──────────────┴──────────────────┴──────────────────┘
@@ -237,7 +237,7 @@ TABEL 5: PEGAWAI_3NF
 
 TABEL 6: PEMINJAMAN_ASET_3NF
 ┌──────────┬──────────┬────────────┬──────────────┬──────────────────┬─────────┐
-│ ID_Pinjam│ ID_Aset  │ ID_Pegawai │ Tgl_Pinjam   │ Tgl_Pengembalian  │ Status  │
+│ ID_Pinjam│ ID_Aset  │ ID_Pegawai │ Tgl_Pinjam   │ Tgl_Pengembalian │ Status  │
 ├──────────┼──────────┼────────────┼──────────────┼──────────────────┼─────────┤
 │ P001     │ A001     │ PG001      │ 15-Jan-2024  │ 20-Jan-2024      │ Selesai │
 │ P002     │ A001     │ PG002      │ 01-Feb-2024  │ 05-Feb-2024      │ Selesai │
@@ -279,21 +279,21 @@ TABEL 8: PENGGUNA_3NF
 └──────────────┘    │ Ruangan      │    └─────────────────┘
        △            └──────────────┘              △
        │                   △                      │
-       │ (1:M)            │ (1:M)            (1:M)│
-       │                  │                       │
+       │ (1:M)             │ (1:M)           (1:M) │
+       │                   │                       │
    ┌───────────────────────┴───────────────────────┐
-   │                      ASET                      │
-   ├──────────────────────────────────────────────┤
-   │ ID_Aset (PK)                                 │
-   │ Kode_Aset (UNIQUE)                           │
-   │ Nama_Aset                                    │
-   │ ID_Kategori (FK) ──────────────→ KATEGORI   │
-   │ ID_Lokasi (FK) ─────────────────→ LOKASI    │
-   │ ID_Kondisi (FK) ───────────────→ KONDISI    │
-   │ Harga_Perolehan                              │
-   │ Tgl_Perolehan                                │
-   │ Status                                       │
-   └──────────────────────┬───────────────────────┘
+   │                      ASET                     │
+   ├───────────────────────────────────────────────┤
+   │ ID_Aset (PK)                                  │
+   │ Kode_Aset (UNIQUE)                            │
+   │ Nama_Aset                                     │
+   │ ID_Kategori (FK) ──────────────→ KATEGORI     │
+   │ ID_Lokasi (FK) ─────────────────→ LOKASI      │
+   │ ID_Kondisi (FK) ───────────────→ KONDISI      │
+   │ Harga_Perolehan                               │
+   │ Tgl_Perolehan                                 │
+   │ Status                                        │
+   └──────────────────────┬────────────────────────┘
                          │
           ┌──────────────┴──────────────┐
           │ (1:M)                  (1:M)│
