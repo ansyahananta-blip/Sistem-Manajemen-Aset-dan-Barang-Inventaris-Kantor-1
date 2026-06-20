@@ -374,3 +374,9 @@ TABEL 8: PENGGUNA_3NF
 **Total Field: 99**
 **Total Relationships: 14**
 **Status: SIAP IMPLEMENTASI**
+
+## PEMBAGIAN TUGAS
+1. Dwiansyah Ananta Tulus 2501020127 (ERD LENGKAP)
+2. Raihan Febrian 2501020092 (PENJELASAN ENTITAS DAN RELASI)
+3. Fathar Sabil Abdullah 2501020105 (KAMUS DATA)
+4. Haikal Fizi Aldavin 250102116 (NORMALIASA DATABASE)
